@@ -14,6 +14,12 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <style>
+      #row-3{
+      transition: 1s;
+      }
+    </style>
   </head>
   <body>
     <h1> Hey !! </h1>
@@ -49,6 +55,12 @@
           <td> 4 </td>
         </tr>
 
+         <tr class="row" id="row-5">
+          <td> 4 </td>
+          <td> 4 </td>
+          <td> 4 </td>
+        </tr>
+
       </tbody>
     </table>
 
@@ -62,5 +74,19 @@
 
       </fieldset>
     </form>
+    <script>
+      $("h1").css("color", "red");
+      $(".section-1").css("background-color", "yellow");
+      var number = $(".counter").text();
+      number = parseInt(number);
+      number = number + 10;
+      $(".counter").text(number);
+      $("#row-3").on("click", function(){
+        $("#row-3").css("background-color", "grey")
+      })
+      $(".section-1>h1").css("font-size", "2em");
+      $("table tr:last-child").css("background-color", "red")
+
+    </script>
   </body>
 </html>
